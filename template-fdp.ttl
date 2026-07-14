@@ -1,56 +1,66 @@
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX ldp: <http://www.w3.org/ns/ldp#>
-PREFIX scio: <http://semanticscience.org/resource/SIO_>
-PREFIX fdp-o: <https://w3id.org/fdp/fdp-o#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
 
-<> a dcat:Resource, dcat:DataService, fdp-o:MetadataService,
-    fdp-o:FAIRDataPoint;
-  rdfs:label "EJP-RD FAIR Data Point";
-  dcterms:title "EJP-RD FAIR Data Point";
-  dcterms:hasVersion "1.0";
+<https://w3id.org/duchenne-fdp> a dcat:Resource, <https://w3id.org/fdp/fdp-o#MetadataService>,
+    <https://w3id.org/fdp/fdp-o#FAIRDataPoint>;
+  <http://www.w3.org/2000/01/rdf-schema#label> "Duchenne Parent Project: FAIR Data";
+  dcterms:title "Duchenne Parent Project: FAIR Data";
+  <https://w3id.org/fdp/fdp-o#metadataIssued> "2024-01-26T11:51:14.258378816Z"^^xsd:dateTime;
+  <https://w3id.org/fdp/fdp-o#metadataModified> "2024-08-19T13:16:46.031738223Z"^^xsd:dateTime;
   dcterms:license <http://rdflicense.appspot.com/rdflicense/cc-by-nc-nd3.0>;
-  dcterms:description "FAIR Data Point to host metadata for the EJP-RD community";
-  dcterms:conformsTo <profiles/Datapoint.ttl>,
-    <profiles/Datapoint.ttl>;
+  dcterms:description "Clinical and Patient Reported data for Duchenne and Becker muscular dystrophy patients.  Conceptual metadata only.  For data access, speak to the publisher of the dataset.";
+  dcterms:conformsTo <https://w3id.org/duchenne-fdp/profile/77aaad6a-0136-4c6e-88b9-07ffccd0ee4c>,
+    <https://w3id.org/duchenne-fdp/profile/77aaad6a-0136-4c6e-88b9-07ffccd0ee4c>;
   dcterms:language <http://id.loc.gov/vocabulary/iso639-1/en>;
-  <http://www.re3data.org/schema/3-0#repositoryIdentifier> <#identifier>;
-  dcterms:accessRights <#accessRights>;
-  dcterms:publisher <#publisher>;
-  scio:000628 <metrics/1>, <metrics/2>;
-  dcat:endpointURL <>, <>;
-  fdp-o:metadataCatalog <fdps/LeidenLongevityStudy/catalog.ttl>;
-  fdp-o:metadataIdentifier <#identifier>;
-  fdp-o:metadataIssued "2021-06-23T10:34:34.293606662Z"^^xsd:dateTime;
-  fdp-o:metadataModified "2023-02-24T14:40:58.212211869Z"^^xsd:dateTime;
-  fdp-o:fdpSoftwareVersion "FDP:v1.15.0~609a912", "FDP:v1.15.0~609a912" .
+  <https://w3id.org/fdp/fdp-o#metadataIdentifier> <https://w3id.org/duchenne-fdp#identifier>;
+  <http://www.re3data.org/schema/3-0#repositoryIdentifier> <https://w3id.org/duchenne-fdp#identifier>;
+  dcterms:accessRights <https://w3id.org/duchenne-fdp#accessRights>;
+  dcterms:publisher <https://w3id.org/duchenne-fdp#publisher>;
+  dcterms:keyword "Becker Muscular Dystrophy", "Duchenne Muscular Dystrophy";
+  dcat:contactPoint [ a <http://www.w3.org/2006/vcard/ns#Agent>;
+      <http://www.w3.org/2006/vcard/ns#url> <https://www.worldduchenne.org/>
+    ];
+  dcat:endpointURL <https://w3id.org/duchenne-fdp>, <https://w3id.org/duchenne-fdp>;
+  dcat:theme <http://www.orpha.net/ORDO/Orphanet_98895>, <http://www.orpha.net/ORDO/Orphanet_98896>;
+  dcat:version "1.0";
+  <https://w3id.org/ejp-rd/vocabulary#personalData> "true";
+  <https://w3id.org/ejp-rd/vocabulary#vpConnection> <https://w3id.org/ejp-rd/vocabulary#VPDiscoverable>;
+  <https://w3id.org/fdp/fdp-o#fdpSoftwareVersion> "FDP:v1.16.2~51911d6", "FDP:v1.17.1~9604e79",
+    "FDP:v1.16.2~51911d6";
+  <https://w3id.org/fdp/fdp-o#metadataCatalog> <https://w3id.org/duchenne-fdp/catalog/198a1aa7-433a-4092-aadd-0c3c9529dac3>;
+  <http://semanticscience.org/resource/SIO_000628> <https://w3id.org/duchenne-fdp/metrics/445c0a70d1e214e545b261559e2842f4>,
+    <https://w3id.org/duchenne-fdp/metrics/5d27e854a9e78eb3f663331cd47cdc13>;
+  dcat:landingPage <https://dpp.worldduchenne.org/>;
+  foaf:logo <https://dpp.worldduchenne.org/assets/dpp-logo.png>;
+  dcat:keyword "Becker Muscular Dystrophy", "Duchenne Muscular Dystrophy" .
 
-<#identifier> a <http://purl.org/spar/datacite/Identifier>;
-  dcterms:identifier "https://w3id.org/ejp-rd/fairdatapoints/wp13" .
+<https://w3id.org/duchenne-fdp#identifier> a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "https://w3id.org/duchenne-fdp" .
 
-<#accessRights> a dcterms:RightsStatement;
+<https://w3id.org/duchenne-fdp#accessRights> a dcterms:RightsStatement;
   dcterms:description "This resource has no access restriction" .
 
-<#publisher> a foaf:Agent;
-  foaf:name "EJP-RD" .
+<https://w3id.org/duchenne-fdp#publisher> a foaf:Agent;
+  foaf:name "Duchenne Parent Project";
+  foaf:logo <https://dpp.worldduchenne.org/assets/dpp-logo.png> .
 
-<catalog/> a ldp:DirectContainer, ldp:DirectContainer;
+<https://w3id.org/duchenne-fdp/catalog/> a ldp:DirectContainer, ldp:DirectContainer;
   dcterms:title "Catalogs", "Catalogs";
-  ldp:hasMemberRelation <http://www.re3data.org/schema/3-0#dataCatalog>, fdp-o:metadataCatalog, # how is 3-0#dataCatalog used as a member relation?
-    fdp-o:metadataCatalog;
-  ldp:membershipResource <>, <>;
-  ldp:contains <fdps/LeidenLongevityStudy/catalog.ttl> .
+  ldp:hasMemberRelation <https://w3id.org/fdp/fdp-o#metadataCatalog>, <https://w3id.org/fdp/fdp-o#metadataCatalog>;
+  ldp:membershipResource <https://w3id.org/duchenne-fdp>, <https://w3id.org/duchenne-fdp>;
+  ldp:contains <https://w3id.org/duchenne-fdp/catalog/198a1aa7-433a-4092-aadd-0c3c9529dac3>,
+    <https://w3id.org/duchenne-fdp/catalog/198a1aa7-433a-4092-aadd-0c3c9529dac3> .
 
-<profiles/Datapoint.ttl>
-  rdfs:label "FAIR Data Point Profile", "FAIR Data Point Profile" .
+<https://w3id.org/duchenne-fdp/profile/77aaad6a-0136-4c6e-88b9-07ffccd0ee4c> <http://www.w3.org/2000/01/rdf-schema#label>
+    "FAIR Data Point Profile", "FAIR Data Point Profile" .
 
-<metrics/1>
-  scio:000628 <https://www.ietf.org/rfc/rfc3986.txt>;
-  scio:000332 <https://www.ietf.org/rfc/rfc3986.txt> .
+<https://w3id.org/duchenne-fdp/metrics/445c0a70d1e214e545b261559e2842f4> <http://semanticscience.org/resource/SIO_000628>
+    <https://www.ietf.org/rfc/rfc3986.txt>;
+  <http://semanticscience.org/resource/SIO_000332> <https://www.ietf.org/rfc/rfc3986.txt> .
 
-<metrics/2>
-  scio:000628 <https://www.wikidata.org/wiki/Q8777>;
-  scio:000332 <https://www.wikidata.org/wiki/Q8777> .
+<https://w3id.org/duchenne-fdp/metrics/5d27e854a9e78eb3f663331cd47cdc13> <http://semanticscience.org/resource/SIO_000628>
+    <https://www.wikidata.org/wiki/Q8777>;
+  <http://semanticscience.org/resource/SIO_000332> <https://www.wikidata.org/wiki/Q8777> .
