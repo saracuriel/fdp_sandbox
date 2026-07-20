@@ -36,7 +36,7 @@
 
 <http://directory.bbmri-eric.eu/ERIC/api/rdf/Endpoints/id=directory_fdp> a ldp:DirectContainer;
 schema:identifier "directory_fdp";
-a fdp-o:FAIRDataPoint,dcat:Resource,fdp-o:MetadataService, dcat:DataService;
+a fdp-o:FAIRDataPoint,dcat:Resource,fdp-o:MetadataService;
 dcterms:title "BBMRI-ERIC Directory FDP";
 dcterms:description "FDP exposing metadata of the BBMRI Directory";
 fdp-o:metadataCatalog <http://directory.bbmri-eric.eu/ERIC/api/rdf/Catalogs/id=directory_catalog>;
