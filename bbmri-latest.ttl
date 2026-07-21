@@ -1,19 +1,19 @@
-@prefix ordo: <http://www.orpha.net/ORDO/> .
 @prefix afr: <http://purl.allotrope.org/ontologies/result#> .
+@prefix ordo: <http://www.orpha.net/ORDO/> .
 @prefix edam: <http://edamontology.org/> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix org: <http://www.w3.org/ns/org#> .
 @prefix lnc: <http://purl.bioontology.org/ontology/LNC/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix org: <http://www.w3.org/ns/org#> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix healthdcatap: <http://healthdataportal.eu/ns/health#> .
 @prefix ERIC: <http://directory.bbmri-eric.eu/ERIC/api/rdf/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix fg: <https://w3id.org/fair-genomes/resource/> .
 @prefix sio: <http://semanticscience.org/resource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix fdp-o: <https://w3id.org/fdp/fdp-o#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
@@ -21,22 +21,21 @@
 @prefix dcatap: <http://data.europa.eu/r5r/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
-@prefix mesh: <http://purl.bioontology.org/ontology/MESH/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mesh: <http://purl.bioontology.org/ontology/MESH/> .
 @prefix schema: <http://schema.org/> .
 @prefix ldp: <http://www.w3.org/ns/ldp#> .
-@prefix efo: <http://www.ebi.ac.uk/efo/> .
 @prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix hl7: <http://purl.bioontology.org/ontology/HL7/> .
+@prefix efo: <http://www.ebi.ac.uk/efo/> .
 @prefix ensembl: <http://ensembl.org/glossary/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix afrl: <http://purl.allotrope.org/ontologies/role#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix ejp: <https://w3id.org/ejp-rd/vocabulary#> .
-
 <http://directory.bbmri-eric.eu/ERIC/api/rdf/Endpoints/id=directory_fdp> a ldp:DirectContainer;
 schema:identifier "directory_fdp";
-a fdp-o:FAIRDataPoint,dcat:Resource,fdp-o:MetadataService;
+a dcat:Resource,fdp-o:MetadataService,fdp-o:FAIRDataPoint;
 dcterms:title "BBMRI-ERIC Directory FDP";
 dcterms:description "FDP exposing metadata of the BBMRI Directory";
 fdp-o:metadataCatalog <http://directory.bbmri-eric.eu/ERIC/api/rdf/Catalogs/id=directory_catalog>;
@@ -44,6 +43,7 @@ ldp:contains <http://directory.bbmri-eric.eu/ERIC/api/rdf/Catalogs/id=directory_
 dcterms:publisher <http://directory.bbmri-eric.eu/ERIC/api/rdf/Publishers/name=BBMRI-ERIC>;
 dcterms:language <http://lexvo.org/id/iso639-3/eng>;
 dcterms:license <https://www.gnu.org/licenses/lgpl-3.0.html#license-text>;
+dcat:landingPage <http://directory.bbmri-eric.eu/ERIC/api/rdf/Endpoints/id=directory_fdp>;
 dcterms:conformsTo <https://specs.fairdatapoint.org/fdp-specs-v1.2.html>;
 dcterms:rights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
 dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
