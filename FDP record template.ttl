@@ -1,48 +1,13 @@
-@prefix ERIC: <http://directory.bbmri-eric.eu/ERIC/api/rdf/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix ldp: <http://www.w3.org/ns/ldp#> .
-@prefix snomedct: <http://purl.bioontology.org/ontology/SNOMEDCT/> .
-@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
-@prefix hl7: <http://purl.bioontology.org/ontology/HL7/> .
-@prefix fg: <https://w3id.org/fair-genomes/resource/> .
-@prefix org: <http://www.w3.org/ns/org#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix edam: <http://edamontology.org/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
-@prefix ordo: <http://www.orpha.net/ORDO/> .
-@prefix afr: <http://purl.allotrope.org/ontologies/result#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix csvw: <http://www.w3.org/ns/csvw#> .
-@prefix sio: <http://semanticscience.org/resource/> .
-@prefix efo: <http://www.ebi.ac.uk/efo/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix schema: <http://schema.org/> .
-@prefix lnc: <http://purl.bioontology.org/ontology/LNC/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix healthdcatap: <http://healthdataportal.eu/ns/health#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix afrl: <http://purl.allotrope.org/ontologies/role#> .
 @prefix fdp-o: <https://w3id.org/fdp/fdp-o#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix dcatap: <http://data.europa.eu/r5r/> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix ejp: <https://w3id.org/ejp-rd/vocabulary#> .
-@prefix ensembl: <http://ensembl.org/glossary/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix qb: <http://purl.org/linked-data/cube#> .
-@prefix mesh: <http://purl.bioontology.org/ontology/MESH/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-<http://x/x_fdp> a ldp:DirectContainer;
-schema:identifier "directory_fdp";
+<http://x/x_fdp>
 a fdp-o:FAIRDataPoint,dcat:Resource,fdp-o:MetadataService;
 dcterms:title "X FDP";
 dcterms:description "FDP exposing metadata of X";
 dcat:landingPage <https://x/x_fdp>;
-fdp-o:metadataCatalog <http://x/x_catalog>;
-ldp:contains <http://x/x_catalog>;
 dcterms:publisher <http://x/y>;
 dcterms:language <http://lexvo.org/id/iso639-3/eng>;
 dcterms:license <https://www.gnu.org/licenses/lgpl-3.0.html#license-text>;
